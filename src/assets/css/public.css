@@ -1,0 +1,62 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td ,textarea,input { margin:0; padding:0; }
+address,cite,dfn,em,var, i {font-style:normal;}
+body {font-size: 14px;font-family:‘Microsoft Yahei’,‘simsun’,‘arial’,‘tahoma’; color: #222; background: #fff; }
+table { border-collapse:collapse; border-spacing:0; }
+h1, h2, h3, h4, h5, h6, th { font-size: 100%; font-weight: normal; }
+button,input,select,textarea{font-size:100%;}
+fieldset,img{border:0;}
+a { text-decoration: none; color: #efffff; background: none;cursor: pointer }
+a:hover{
+  color: #b7c2cc;
+}
+ul, ol { list-style: none; }
+html,body{
+  height: 100%;
+}
+.el-menu {
+  border: none!important;
+}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.el-scrollbar__view{
+  height: 100%;
+}
+.el-dialog{
+  border-radius: 20px 20px 15px 15px!important;
+}
+.el-dialog__header{
+  border-radius: 15px 15px 0 0;
+  background: #409eff;
+}
+.el-dialog__header span{
+  color: #fff!important;
+}
+.el-dialog__header i{
+  color: #fff!important;
+}
+.el-dialog__body{
+  padding: 25px 60px 10px!important;
+  background: #e7eeff!important;
+}
+.el-dialog__footer{
+  padding: 10px 60px 40px !important;
+  background: #e7eeff!important;
+  border-radius: 0 0 10px 10px;
+}
+.dialog-footer .el-button{
+  margin: 0 20px!important;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background-color: #dae9ff !important;
+}
+.el-icon-error{
+  color: #ffc333!important;
+}
