@@ -53,11 +53,17 @@ export default {
       townList: [],
       townName: null,
       villageName: '',
-      tableData: []
+      tableData: [],
+      oneCharts: null
     }
   },
   mounted () {
     this.initdata()
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', () => {
+      this.oneCharts.resize()
+    })
   },
   methods: {
     changeCunName (val) {
@@ -126,8 +132,8 @@ export default {
         this.tableData.push(obj)
       })
       let imgBase64 = ''
-      let oneCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
-      oneCharts.setOption({
+      this.oneCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
+      this.oneCharts.setOption({
         color: ['#ffc333'],
         title: {
           text: `${this.townName}${this.villageName}每日用水量`,
@@ -177,9 +183,12 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.oneCharts.resize()
+      })
       // 将图表转成图片为打印做准备
       setTimeout(() => {
-        imgBase64 = oneCharts.getDataURL()
+        imgBase64 = this.oneCharts.getDataURL()
         this.$refs.imgbox.src = imgBase64
       }, 1000)
     }

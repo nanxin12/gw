@@ -75,7 +75,7 @@ export default {
   name: 'Price',
   data () {
     let waterMinNumber = (rule, value, callback) => {
-      if (!value) {
+      if (value === '') {
         callback(new Error('水量不能为空'))
       } else {
         let reg = /^[0-9]+(.[0-9]{1,2})?$/
@@ -90,7 +90,7 @@ export default {
       }
     }
     let waterMaxNumber = (rule, value, callback) => {
-      if (!value) {
+      if (value === '') {
         callback(new Error('水量不能为空'))
       } else {
         let reg = /^[0-9]+(.[0-9]{1,2})?$/

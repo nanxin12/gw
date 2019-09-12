@@ -244,7 +244,6 @@ import borderImg from './borderImg'
 import MP from '@/assets/js/AmapAndUi'
 import setTime from '@/assets/js/setTime'
 // import log from '@/assets/img/dp_mapImg.png'
-import red from '@/assets/img/red.gif'
 import gray from '@/assets/img/gray.gif'
 import yellow from '@/assets/img/yellow.gif'
 import green from '@/assets/img/green.gif'
@@ -437,8 +436,8 @@ export default {
       charts.setOption({
         tooltip: {
           trigger: 'axis',
-          axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
           }
         },
         legend: {
@@ -631,9 +630,9 @@ export default {
                 // 图片加载成功，重新绘制一次
                 pathSimplifierIns.renderLater()
               },
-                function onerror (e) {
-                  alert('图片加载失败！')
-                })
+              function onerror (e) {
+                alert('图片加载失败！')
+              })
             }
           }
           let pathSimplifierIns = new PathSimplifier({
@@ -1433,18 +1432,12 @@ export default {
   }
   .titles {
     margin: 0 0.41vw;
-    color: #09aded;
+    // color: #09aded;
     font-weight: bold;
     font-size: 0.8411vw;
-    // background-image: -webkit-gradient(
-    //   linear,
-    //   0 0,
-    //   0 bottom,
-    //   from(rgba(0, 128, 0, 1)),
-    //   to(rgba(51, 51, 51, 1))
-    // );
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
+    background-image:-webkit-linear-gradient(bottom,#09ADED,#07EBFF,#07EBFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
   }
   .rightImg {
     transform: rotateY(180deg);

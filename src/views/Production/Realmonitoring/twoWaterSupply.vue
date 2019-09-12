@@ -91,6 +91,9 @@ export default {
       timeTwoList: []
     }
   },
+  beforeDestroy () {
+    this.closeDig()
+  },
   mounted () {
     this.initTown()
   },

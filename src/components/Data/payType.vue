@@ -42,14 +42,17 @@ export default {
       villageName: '',
       townName: null,
       townList: [],
-      villageList: []
+      villageList: [],
+      oneCharts: null
     }
   },
-  created () {
+  mounted () {
     this.initdata()
   },
-  mounted () {
-
+  beforeDestroy () {
+    window.removeEventListener('resize', () => {
+      this.oneCharts.resize()
+    })
   },
   methods: {
     changeCunName (val) {
@@ -89,7 +92,6 @@ export default {
     },
     // 初始化图表数据
     async initchartsdata () {
-      console.log(this.formInline)
       let res = await this.$api.sso.getDataPageMsg(this.formInline)
       if (res.code === 200) {
         this.initCharts(res.data.columnList)
@@ -113,8 +115,8 @@ export default {
         ali.push(item.aliPayMoney)
       })
       let imgBase64 = ''
-      let twoCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
-      twoCharts.setOption({
+      this.oneCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
+      this.oneCharts.setOption({
         title: {
           text: `${this.townName}${this.villageName}每月收费统计`,
           x: 'left',
@@ -210,22 +212,13 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.oneCharts.resize()
+      })
       setTimeout(() => {
-        imgBase64 = twoCharts.getDataURL()
+        imgBase64 = this.oneCharts.getDataURL()
         this.$refs.imgbox.src = imgBase64
       }, 1000)
-      window.addEventListener('resize', function () {
-        twoCharts.resize()
-      })
-      window.addEventListener('click', function () {
-        if (event.target.id === 'weituo' || event.target.parentNode.id === 'weituo') {
-          setTimeout(function () {
-            twoCharts.resize()
-          }, 150)
-        } else {
-          return false
-        }
-      }, true)
     },
     // 重置搜索
     reset () {

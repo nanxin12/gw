@@ -1,0 +1,381 @@
+文件夹 PATH 列表
+卷序列号为 CE2F-63AD
+C:.
+│  App.vue
+│  main.js
+│  router.js
+│  store.js
+│  tree.txt
+│  
+├─assets 放置静态资源
+│  ├─css  公共css目录
+│  │      public.css
+│  │      
+│  ├─icon 小图标
+│  │      iconfont.css
+│  │      iconfont.eot
+│  │      iconfont.svg
+│  │      iconfont.ttf
+│  │      iconfont.woff
+│  │      iconfont.woff2
+│  │      
+│  ├─img  图片
+│  │      404.png
+│  │      alittrtGreen.png
+│  │      archive.png
+│  │      baojing.png
+│  │      baojing1.gif
+│  │      bengfangshu.png
+│  │      bg.jpg
+│  │      bl.png
+│  │      chanxiao.png
+│  │      charge.png
+│  │      close.png
+│  │      deepGreen.png
+│  │      diaodu.png
+│  │      direct.jpg
+│  │      down.png
+│  │      dp_1.png
+│  │      dp_2.png
+│  │      dp_3.png
+│  │      dp_4.png
+│  │      dp_5.png
+│  │      dp_6.png
+│  │      dp_7.png
+│  │      dp_8.png
+│  │      dp_bg.png
+│  │      dp_cx.png
+│  │      dp_fillet.png
+│  │      dp_guang.png
+│  │      dp_hu.png
+│  │      dp_logo.png
+│  │      dp_mapImg.png
+│  │      dp_nav1.png
+│  │      dp_nav2.png
+│  │      dp_nav4.png
+│  │      dp_nav5.png
+│  │      dp_nh.png
+│  │      dp_rgs.png
+│  │      dp_rysl.png
+│  │      dp_sj.png
+│  │      dp_yh.png
+│  │      edit-3.png
+│  │      exit.png
+│  │      fengshan.png
+│  │      file-text.png
+│  │      fivelog.png
+│  │      fourlog.png
+│  │      gongshui.png
+│  │      goods.png
+│  │      gray.gif
+│  │      green.gif
+│  │      green.png
+│  │      heightPool.png
+│  │      hig.png
+│  │      home.png
+│  │      homebg.jpg
+│  │      huaile.png
+│  │      Img404.png
+│  │      info_delete.png
+│  │      info_deletes.png
+│  │      info_head.png
+│  │      info_info.png
+│  │      info_read.png
+│  │      info_sign.png
+│  │      info_unread.png
+│  │      jizushu.png
+│  │      lakes.png
+│  │      layers.png
+│  │      light.png
+│  │      liua.png
+│  │      lixian.png
+│  │      login_bg.png
+│  │      logo.png
+│  │      low.png
+│  │      maintenance.png
+│  │      name.png
+│  │      nenghao.png
+│  │      newImg.png
+│  │      noneImg.png
+│  │      onelog.png
+│  │      open.png
+│  │      paWatch.png
+│  │      ph.png
+│  │      production.png
+│  │      pump.png
+│  │      pwd.png
+│  │      red.gif
+│  │      red.png
+│  │      savePool.png
+│  │      scgl_logs.png
+│  │      setting.png
+│  │      shijian.png
+│  │      supplywater.png
+│  │      threelog.png
+│  │      tuoguanlv.png
+│  │      twolog.png
+│  │      up.png
+│  │      userImg.png
+│  │      video.png
+│  │      wzgl_logs.png
+│  │      xtsz_logs.png
+│  │      yaohao.png
+│  │      yellow.gif
+│  │      yellow.png
+│  │      yichang.png
+│  │      yonghu.png
+│  │      ysxt_logs.png
+│  │      yujing.png
+│  │      yulv.png
+│  │      yunying.jpg
+│  │      ywgl_logs.png
+│  │      zaixian.png
+│  │      zhuodu.png
+│  │      
+│  └─js    公共js
+│          AmapAndUi.js
+│          getTime.js
+│          minToMax.js
+│          print.js
+│          setTime.js
+│          waterPipe.js
+│          
+├─components 放置项目组件
+│  ├─Bread 面包屑
+│  │      index.vue
+│  │      
+│  ├─Data 营收系统组件
+│  │      dayWater.vue
+│  │      monthWater.vue
+│  │      payType.vue
+│  │      
+│  ├─Header 头部
+│  │      index.vue
+│  │      
+│  ├─maintain 运维系统组件
+│  │      EventDetails.vue
+│  │      Forms.vue
+│  │      Titles.vue
+│  │      
+│  ├─Menu 左侧菜单
+│  │      index.vue
+│  │      menuContent.vue
+│  │      
+│  └─NotFound 404页面
+│          index.vue
+│          
+├─http 放置请求相关东西
+│  │  api.js 引入接口并导出
+│  │  axios.js axios请求配置
+│  │  config.js 基本信息配置
+│  │  index.js 配置axios为全局方法
+│  │  
+│  └─moudules 具体的接口分类
+│      ├─home 登录页面接口
+│      │      index.js
+│      │      
+│      ├─maintain 运维系统接口
+│      │      index.js
+│      │      
+│      ├─material 物资系统接口
+│      │  │  goodsIndex.js
+│      │  │  
+│      │  ├─basicinfoSys
+│      │  │      classifymanageht.js
+│      │  │      productmanageht.js
+│      │  │      supplierht.js
+│      │  │      wmanageht.js
+│      │  │      
+│      │  ├─purchasingSys
+│      │  │      applyApproval.js
+│      │  │      applysub.js
+│      │  │      order.js
+│      │  │      plan.js
+│      │  │      
+│      │  ├─repertorySys
+│      │  │      checks.js
+│      │  │      deliverys.js
+│      │  │      inventory.js
+│      │  │      receives.js
+│      │  │      receivesapply.js
+│      │  │      warehousing.js
+│      │  │      
+│      │  └─reportForm
+│      │          reportForm.js
+│      │          
+│      ├─product 生产系统接口
+│      │      index.js
+│      │      
+│      ├─sso 营收系统接口
+│      │      index.js
+│      │      
+│      ├─system 系统设置接口
+│      │      menuList.js
+│      │      organizeList.js
+│      │      personalCenter.js
+│      │      roleList.js
+│      │      url.js
+│      │      userList.js
+│      │      
+│      └─waterSupply 供水调度接口
+│              index.js
+│              
+└─views 放置系统页面
+    │  home.vue 系统页面主要框架，这里集成头部、底部包含系统6大子模块
+    │  login.vue 登录页面
+    │  
+    ├─charge 营收系统
+    │  │  chargehome.vue 营收系统首页这里集成头部、面包屑、左侧菜单、右侧内容
+    │  │  
+    │  ├─Index 营收首页
+    │  │      Index.vue
+    │  │      
+    │  ├─Setting 系统设置
+    │  │      Parameter.vue 参数设置
+    │  │      Price.vue 水价设定
+    │  │      Template.vue 发票模板
+    │  │      
+    │  ├─Statistics 统计分析
+    │  │      abnormalWater.vue 异常用水
+    │  │      Data.vue 数据统计
+    │  │      
+    │  ├─Toll 收费管理
+    │  │      Arrearage.vue 欠费管理
+    │  │      Billmanage.vue 账单管理
+    │  │      Detail.vue 缴费明细
+    │  │      Invoice.vue 补打发票
+    │  │      Recharge.vue 水费充值
+    │  │      
+    │  ├─User 用户管理
+    │  │      Adduser.vue 新装用户
+    │  │      Deleteuser.vue 用户注销
+    │  │      Revampuser.vue 用户变更
+    │  │      Userlist.vue 用户列表
+    │  │      
+    │  └─Watermeter 表计管理
+    │          Data.vue 数据采集
+    │          Meter.vue 阀门控制
+    │          Reading.vue 抄表管理
+    │          readMeterRecord.vue 抄表记录
+    │          Watermanange.vue 水表信息
+    │          
+    ├─goods
+    │  │  goodshome.vue 物资系统首页这里集成头部、面包屑、左侧菜单、右侧内容
+    │  │  index.vue 物资首页
+    │  │  
+    │  ├─basicinfoSys 基本信息管理
+    │  │      classifymanage.vue 产品分类管理
+    │  │      productmanage.vue
+    │  │      Smanage.vue 供应商管理
+    │  │      Wmanage.vue 仓库管理
+    │  │      
+    │  ├─purchasingSys 采购管理
+    │  │      ApplyApproval.vue 采购申请审批
+    │  │      Applysub.vue 代采购
+    │  │      order.vue 采购订单管理
+    │  │      plan.vue 采购计划管理
+    │  │      
+    │  ├─repertorySys 库存物资管理
+    │  │      checks.vue 物资验收
+    │  │      deliverys.vue 物资出库
+    │  │      inventory.vue 库存盘点
+    │  │      receives.vue 物资领取申请
+    │  │      receivesapply.vue 物资申请审批
+    │  │      warehousing.vue 入库管理
+    │  │      
+    │  └─reportsSys 报表管理
+    │          Cdetailed.vue 验收明细表
+    │          Invdetailed.vue 库存盘点明细表
+    │          OSdetailed.vue 出库明细表
+    │          Pdetailed.vue 采购订单明细表
+    │          Wdetailed.vue 入库明细表
+    │          
+    ├─maintain 运维管理
+    │  │  index.vue 运维首页
+    │  │  maintainHome.vue 运维管理首页这里集成头部、面包屑、左侧菜单、右侧内容
+    │  │  
+    │  ├─count 统计分析
+    │  │      event.vue 巡检任务
+    │  │      patrol.vue 事件统计
+    │  │      
+    │  ├─event 事件处理
+    │  │      manage.vue 事件办理
+    │  │      pandect.vue 事件总览
+    │  │      
+    │  ├─plan 巡检计划
+    │  │      assign.vue 计划分派
+    │  │      assignPandect.vue 计划总览
+    │  │      make.vue 计划定制
+    │  │      pandect.vue 分派总览
+    │  │      regionManage.vue 区域管理
+    │  │      survey.vue 计划审批
+    │  │      
+    │  ├─report 事件上报
+    │  │      leak.vue 漏点上报
+    │  │      maintain.vue 维修上报
+    │  │      
+    │  └─work 工单处理
+    │          manage.vue 工单办理
+    │          pandect.vue 工单总览
+    │          
+    ├─Production 生产管理
+    │  │  index.vue 生产首页
+    │  │  productionhome.vue 生产管理首页这里集成头部、面包屑、左侧菜单、右侧内容
+    │  │  
+    │  ├─Realmonitoring 实时监控
+    │  │      equipmentControl.vue 测试流程
+    │  │      monitoring.vue 视频监控
+    │  │      oneWaterSupply.vue
+    │  │      realdata.vue 实时数据
+    │  │      twoWaterSupply.vue 二供监控
+    │  │      
+    │  ├─syssettings 系统设置
+    │  │      equipmentmanage.vue 设备管理
+    │  │      monitoringmanage.vue 监控管理
+    │  │      parameter.vue 参数管理
+    │  │      pipenetwork.vue 管网管理
+    │  │      stationManage.vue 站点管理
+    │  │      stationType.vue 站点类型
+    │  │      
+    │  └─Warn 监控报警
+    │          historywarn.vue 实时报警
+    │          nowwarn.vue 历史报警
+    │          
+    ├─system 系统设置
+    │  │  systemHome.vue 系统设置首页这里集成头部、面包屑、左侧菜单、右侧内容
+    │  │  
+    │  ├─menuManagement 菜单管理
+    │  │      menuList.vue 菜单列表
+    │  │      url.vue 后端url
+    │  │      
+    │  ├─organizeManagement 组织管理
+    │  │      organizeList.vue 组织列表
+    │  │      
+    │  ├─personalCenter 个人中心
+    │  │  │  index.vue 个人中心
+    │  │  │  
+    │  │  └─components 个人中心组件
+    │  │          material.vue
+    │  │          purchase.vue
+    │  │          
+    │  ├─roleManagement 角色管理
+    │  │      roleList.vue 角色列表
+    │  │      
+    │  └─userManagement 用户管理
+    │          userList.vue 用户列表
+    │          
+    └─waterSupply 供水信息
+            borderImg.vue 组件
+            overview.vue 供水调度
+            pipe.vue 管线检测
+            waterSupplyHome.vue 供水调度首页，集成供水调度和管线检测
+│      └─waterSupply 供水调度接口
+│              index.js
+│              
+└─APP.vue 系统根页面
+│              
+└─main.js 系统引入插件的地方
+│              
+└─router.js 系统路由
+│              
+└─store.js vuex

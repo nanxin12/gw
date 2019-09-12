@@ -180,12 +180,21 @@
                     </li>
                     <li>
                       <div style="width: 20%;">
+                        <img src="../../assets/img/dp_9.png" alt="">
+                      </div>
+                      <span class="span1" style="width: 20%; color:#63B0FF">浊度</span>
+                      <p style="color: #63B0FF;width: 35%;">标准：0.048~0.052</p>
+                      <em style="width: 15%;color:#ECF4FF">0.3{{item.num1}}</em>
+                      <span style="color: #05C958">正常</span>
+                    </li>
+                    <li>
+                      <div style="width: 20%;">
                         <img src="../../assets/img/dp_6.png" alt="">
                       </div>
                       <span class="span1" style="width: 20%;">余氯值</span>
                       <p style="color: #ffae45;width: 35%;">标准：0.32~0.36mg/l</p>
-                      <em style="width: 15%">0.3{{item.num1}}</em>
-                      <span style="color: #39800B">正常</span>
+                      <em style="width: 15%;color:#ECF4FF">0.3{{item.num1}}</em>
+                      <span style="color: #05C958">正常</span>
                     </li>
                     <li>
                       <div style="width: 20%;">
@@ -193,8 +202,8 @@
                       </div>
                       <span class="span1 span3" style="color: #00d7e9;width: 20%;">PH值</span>
                       <p style="color: #00d7e9;width: 35%;">标准：7.11~7.99</p>
-                      <em style="width: 15%">7.{{item.num2}}</em>
-                      <span style="color: #39800B">正常</span>
+                      <em style="width: 15%;color:#ECF4FF">7.{{item.num2}}</em>
+                      <span style="color: #05C958">正常</span>
                     </li>
                   </ul>
                 </div>
@@ -1508,7 +1517,7 @@ export default {
           color: rgba(219, 231, 250, 1);
           // font-size: 0.8333vw;
           font-size: 0.7476vw;
-          margin-bottom: 0.908vw;
+          margin-bottom: 6px;
         }
       }
       .box {
@@ -1538,7 +1547,7 @@ export default {
                   align-items: center;
                   font-size: 16px;
                   color: #FFF;
-                  margin-bottom: 20px;
+                  margin-bottom: 18px;
                 }
                 li:nth-child(1) {
                   justify-content: flex-start;

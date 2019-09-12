@@ -36,11 +36,11 @@ export default {
       toptitle: [
         {
           title: '总户数',
-          data: '3625'
+          data: ''
         },
         {
           title: '在线总户数',
-          data: '3625'
+          data: ''
         },
         {
           title: '当月总缴费金额',
@@ -67,7 +67,11 @@ export default {
       arrearage: [],
       lastWater: [],
       nowWater: [],
-      payMoney: []
+      payMoney: [],
+      oneCharts: null,
+      twoCharts: null,
+      threeCharts: null,
+      fourCharts: null
     }
   },
   mounted () {
@@ -86,8 +90,8 @@ export default {
         appPayMoney: null
       }
       if (this.payMoney.length) obj = this.payMoney[this.payMoney.length - 1]
-      let oneCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
-      oneCharts.setOption({
+      this.oneCharts = this.$echarts.init(document.getElementsByClassName('oneCharts')[0])
+      this.oneCharts.setOption({
         color: ['#79E898', '#FFBE8C', '#8BC8FF', '#FFA08D', '#919EFF', '#FFD58C'],
         title: {
           text: '实收金额',
@@ -177,6 +181,9 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.oneCharts.resize()
+      })
     },
     initIncomeCharts () {
       let x = []
@@ -187,8 +194,8 @@ export default {
         y1.push(item.realAmount)
         y2.push(item.amountReceivable)
       })
-      let twoCharts = this.$echarts.init(document.getElementsByClassName('twoCharts')[0])
-      twoCharts.setOption({
+      this.twoCharts = this.$echarts.init(document.getElementsByClassName('twoCharts')[0])
+      this.twoCharts.setOption({
         title: {
           text: '金额收取对比',
           textStyle: {
@@ -241,6 +248,9 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.twoCharts.resize()
+      })
     },
     initArrearageCharts () {
       let x = []
@@ -249,8 +259,8 @@ export default {
         x.push(setTime({ date: item.countTime, number: 1000, type: 3 }))
         y.push(item.totalAmountDue)
       })
-      let fourCharts = this.$echarts.init(document.getElementsByClassName('fourCharts')[0])
-      fourCharts.setOption({
+      this.fourCharts = this.$echarts.init(document.getElementsByClassName('fourCharts')[0])
+      this.fourCharts.setOption({
         title: {
           text: '欠费金额',
           textStyle: {
@@ -299,6 +309,9 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.fourCharts.resize()
+      })
     },
     initWaterCharts () {
       let x = []
@@ -311,8 +324,8 @@ export default {
         x.push(setTime({ date: item.countTime, number: 1000, type: 3 }))
         y2.push(item.sumTotal)
       })
-      let threeCharts = this.$echarts.init(document.getElementsByClassName('threeCharts')[0])
-      threeCharts.setOption({
+      this.threeCharts = this.$echarts.init(document.getElementsByClassName('threeCharts')[0])
+      this.threeCharts.setOption({
         title: {
           text: '售水量',
           textStyle: {
@@ -357,13 +370,16 @@ export default {
           }
         ]
       })
+      window.addEventListener('resize', () => {
+        this.threeCharts.resize()
+      })
     },
     // 初始化头部数据
     async initTitData () {
       let res = await this.$api.sso.getIndexTitData()
       if (res.code === 200) {
-        // this.toptitle[0].data = res.data.totalUser
-        // this.toptitle[1].data = res.data.onLine
+        this.toptitle[0].data = res.data.totalUser
+        this.toptitle[1].data = res.data.onLine
         this.toptitle[2].data = res.data.sumTotal.payMoneyTotal
         this.toptitle[3].data = res.data.sumMoneyAndTotal.sumTotal
         this.toptitle[4].data = res.data.amount.amountReceivable
@@ -375,7 +391,6 @@ export default {
     async initChartsData () {
       let res = await this.$api.sso.getIndexChartsData()
       if (res.code === 200) {
-        console.log(res.data)
         this.income = []
         this.arrearage = []
         this.lastWater = []
@@ -424,6 +439,20 @@ export default {
         this.initPayCharts()
       } else this.$message.error('数据获取失败')
     }
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', () => {
+      this.oneCharts.resize()
+    })
+    window.removeEventListener('resize', () => {
+      this.twoCharts.resize()
+    })
+    window.removeEventListener('resize', () => {
+      this.threeCharts.resize()
+    })
+    window.removeEventListener('resize', () => {
+      this.fourCharts.resize()
+    })
   }
 }
 </script>
